@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的本地游戏库</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .game-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        .game-info {
+            padding: 20px;
+        }
+        .game-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .game-desc {
+            color: #666;
+            line-height: 1.5;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #e1e8ed;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 我的本地游戏库</h1>
+    <div class="game-container">
+        <a href="./2048/index.html" class="game-card">
+            <div class="game-info">
+                <div class="game-title">2048</div>
+                <div class="game-desc">经典的数字合成游戏。滑动方块，合并相同的数字，直到达到 2048！</div>
+                <div class="tag">益智</div>
+                <div class="tag">单人</div>
+            </div>
+        </a>
+        
+        <a href="./hextris/index.html" class="game-card">
+            <div class="game-info">
+                <div class="game-title">Hextris</div>
+                <div class="game-desc">六边形版的俄罗斯方块。旋转六边形，消除颜色，快节奏的挑战！</div>
+                <div class="tag">街机</div>
+                <div class="tag">反应</div>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
